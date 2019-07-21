@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc0bff00-8e6b-4003-8c72-c06664618974" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dac.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scrap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adafruit_MCP4725-master/.github/ISSUE_TEMPLATE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adafruit_MCP4725-master/.github/PULL_REQUEST_TEMPLATE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adafruit_MCP4725-master/Adafruit_MCP4725.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adafruit_MCP4725-master/Adafruit_MCP4725.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adafruit_MCP4725-master/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adafruit_MCP4725-master/examples.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adafruit_MCP4725-master/examples.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adafruit_MCP4725-master/examples.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adafruit_MCP4725-master/examples/sinewave/sinewave.ino" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adafruit_MCP4725-master/examples/trianglewave/trianglewave.ino" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adafruit_MCP4725-master/libexamples.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adafruit_MCP4725-master/library.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adafruit_MCP4725-master/license.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Adafruit_MCP4725-master/trianglewave.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/method_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/setVoltage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,18 +16,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="initialize_board.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/initialize_board.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="scrap" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scrap">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="dac.py" pinned="false" current-in-tab="false">
@@ -63,14 +37,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gui.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gui.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            <state relative-caret-position="136">
+              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -107,6 +90,7 @@
         <option value="$PROJECT_DIR$/dac.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/gui.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -116,7 +100,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -227,7 +211,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32897604" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4570957" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3729373" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32838285" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18456884" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -425,16 +409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrap">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/pythoninterpreter/Lib/site-packages/board.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dac.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -455,13 +429,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scrap">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/pythoninterpreter/Lib/site-packages/board.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="978">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        <state relative-caret-position="136">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
         </state>
       </provider>
     </entry>
