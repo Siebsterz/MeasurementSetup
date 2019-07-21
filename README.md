@@ -1,1 +1,3 @@
 #MeasurementSetup
+
+test clone
