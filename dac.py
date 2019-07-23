@@ -1,6 +1,3 @@
-import time
-import math
-
 # Import the MCP4725 module.
 import Adafruit_MCP4725
 
@@ -17,7 +14,7 @@ dac = Adafruit_MCP4725.MCP4725(address=0x60)
 reference_voltage = 5
 resolution = 4096	#12bit DAC
 
-def DACVoltage(desired_voltage):        
+def DACVoltage(desired_voltage):
     digital_value = float(desired_voltage) * (resolution/reference_voltage)
     print("desired voltage = " + str(desired_voltage))
     print("digital voltage = " + str(digital_value))
