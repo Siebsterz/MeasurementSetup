@@ -1,87 +1,77 @@
-from tkinter import *
+import tkinter
+from tkinter import Button
+from tkinter import Entry
+from tkinter import Label
+from tkinter import StringVar
+import RPi.GPIO
+import sys
 import dac
-#import time
-#from statistics import mean
+RPi.GPIO.setmode(RPi.GPIO.BCM)
 
-class Application(Frame):
+## hardware
 
-    def __init__(self, master=None):
-        Frame.__init__(self, master)
-
-        self.voltage = ""
-        self.warning = str("")
-        self.voltageOK = False
-        self.currentMeasurementVar = IntVar()
-        self.currentMeasurementActivated = False
-        self.current = 0
-
-        self.pack()
-        self.createWidgets()
-        self.pack()
-
-        #self.onUpdate()
-        print(self.voltage)
-
-    def createWidgets(self):
-        self.voltageLabel = Label(self, text="Enter desired voltage")
-        self.voltageLabel.pack()
-
-        self.voltageEntry = Entry(self)
-        self.voltageEntry.pack()
-        self.voltageEntry.focus_set()
-
-        self.warningStringVar = StringVar()
-        self.warningStringVar.set("test")
-        self.warning = Label(self, textvariable=self.warningStringVar)
-        self.warning.pack()
-
-        self.buttonSubmit = Button(self, text="Set voltage", command=self.setVoltage)
-        self.buttonSubmit.pack()
-
-        self.buttonReset = Button(self, text="RESET", fg="#f46e42", command=self.reset)
-        self.buttonReset.pack()
-
-        self.QUIT = Button(self, text="QUIT", fg="red", command=quitApp)
-        self.QUIT.pack(side="bottom")
-
-    def setVoltage(self):
-        self.voltage = self.voltageEntry.get()
-        #self.voltageOK = False
-        print(self.voltage)
-        if self.voltage == "":
-            self.warningStringVar.set("Enter a value")
-        elif not self.voltage.isdigit():
-            self.warningStringVar.set("Enter a real number")
-        elif int(self.voltage) > 3.3:
-            self.warningStringVar.set("Max 3.3V!")
-        else:
-            dac.setVoltage(self.voltage)
-            print(self.voltage)
-            return
-
-"""
-    def onUpdate(self):
-        
-        #Look for voltage to apply
-        if self.voltageOK:
-            self.setVoltage(self.voltage)
-            self.voltageOK = False;
-            self.after(1000, self.onUpdate)
-        else:
-            self.after(1000, self.onUpdate)
-"""
-
-def reset(self):
-        self.currentMeasurementVar.set(0)
-
-def quitApp():
-    root.destroy()
-
-
-root = Tk()
+##GUI DEFINITIONS
+root = tkinter.Tk()
 root.title("Resistivity Measurement")
-root.geometry("300x300")
-root.protocol("WM_DELETE_WINDOW", quitApp)
-app = Application(master=root)
-app.pack()
+
+##VARIABLES
+voltageWarning = StringVar()
+voltageON = False
+currentON = False
+
+##FUNCTIONS
+def setCurrent():
+    print("Hello world")
+    currentButton.config(text = "ON")
+
+def setVoltage():
+    voltage = voltageEntry.get()
+    if voltage == "":
+        voltageWarning.set("No voltage specified")
+    elif not isDigit(voltage):
+        voltageWarning.set("Enter a real number")
+    elif float(voltage) > 5:
+        voltageWarning.set("Voltage capped at 5V")
+        dac.DACVoltage(voltage)
+        voltageButtonON.config(text = "Voltage ON")
+    else:
+        voltageWarning.set("")
+        dac.DACVoltage(voltage)
+        voltageButtonON.config(text = "Voltage ON")
+
+def turnOFFvoltage():
+    dac.DACVoltage(0)
+    voltageButtonON.config(text = "Set voltage")
+
+def isDigit(x):
+    try:
+        float(x)
+        return True
+    except ValueError:
+        return False
+
+def quit():
+    sys.exit(0)
+
+##WIDGETS
+currentButton = Button(root, text = "Set current", command = setCurrent, bg = "red", height = 1, width = 10) 
+voltageButtonON = Button(root, text = "Set voltage", command = setVoltage, bg = "green", height = 1, width = 10)
+voltageButtonOFF = Button(root, text = "Turn off voltage", command = turnOFFvoltage, bg = "red", height = 1, width = 10)
+voltageEntry  = Entry (root)
+voltageWarningLabel = Label(root, textvariable = voltageWarning)
+quitButton = Button(root, text = "Quit", command = quit, bg = "red", height = 1, width = 10) 
+
+currentButton.grid(row = 0, column = 1)
+voltageButtonON.grid(row = 1, column = 1)
+voltageButtonOFF.grid(row = 1, column = 3)
+voltageEntry.grid (row = 1, column = 2)
+voltageEntry.focus_set()
+voltageWarningLabel.grid(row= 2, column = 2)
+quitButton.grid(row=3, column = 1)
+
+
+
+
+
+
 root.mainloop()
